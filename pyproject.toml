@@ -3,15 +3,13 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "my-pi-project" # TODO: Update with your project name
+name = "gala-yard-haunt"
 version = "0.1.0"
 description = "A Pythonic starter for your Raspberry Pi projects"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
-authors = [
-  { name = "Your Name", email = "your.email@example.com" }, # TODO: Update with your info
-]
+authors = [{ name = "Jimmy Wilson", email = "jimmynotjim@me.com" }]
 dependencies = ["python-dotenv>=1.0.0"]
 
 [project.optional-dependencies]
@@ -21,12 +19,13 @@ dev = [
   "pre-commit>=3.5.0",
   "pytest>=7.4.0",
   "pytest-cov>=4.1.0",
+  "detect-secrets>=1.5.0",
 ]
 pi = ["RPi.GPIO>=0.7.1", "gpiozero>=2.0", "picamera2>=0.3.12"]
 
 [project.urls]
-Homepage = "https://github.com/YOUR-USERNAME/YOUR-PROJECT-NAME"   # TODO: Update
-Repository = "https://github.com/YOUR-USERNAME/YOUR-PROJECT-NAME" # TODO: Update
+Homepage = "https://github.com/jimmynotjim/gala-yard-haunt"
+Repository = "https://github.com/jimmynotjim/gala-yard-haunt"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
