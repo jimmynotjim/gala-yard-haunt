@@ -21,11 +21,6 @@ htmlcov/
 .mypy_cache/
 
 # IDEs
-.vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 .idea/
 *.swp
 .DS_Store

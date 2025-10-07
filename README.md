@@ -296,6 +296,36 @@ The type stubs provide type information for `gpiozero` and `RPi.GPIO` without re
 
 The included stubs cover the most common GPIO components. If you need additional components, you can extend the stubs in `typings/gpiozero.pyi` or `typings/RPi/GPIO.pyi`. Just add the class or function signature - the implementation isn't needed since these are only for type checking!
 
+### VSCode Setup
+
+#### Install Recommended Extensions
+
+When you open the project in VSCode, you'll be prompted to install recommended extensions from [.vscode/extensions.json](.vscode/extensions.json). These include:
+
+- **Python** - Core Python language support
+- **Pylance** - Fast Python language server with type checking
+- **Ruff** - Fast Python linter and formatter
+- **mypy** - Static type checker integration
+- **Error Lens** - Inline error highlighting
+- **Remote SSH** - For working on your Raspberry Pi remotely
+- And more...
+
+If you don't see the prompt, you can manually install them:
+
+1. Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux)
+2. Type "Extensions: Show Recommended Extensions"
+3. Click "Install All" or install individually
+
+#### Select Python Interpreter
+
+You need to select the correct Python interpreter for Pylance to recognize your installed dependencies:
+
+1. Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux)
+2. Type "Python: Select Interpreter"
+3. Choose the interpreter from your virtual environment (should show `./venv/bin/python` or similar)
+
+You can verify the active interpreter by checking the bottom-right corner of VSCode - it should show the Python version and environment path. If import errors persist after installing dependencies, make sure VSCode is using the correct interpreter.
+
 ## Troubleshooting
 
 ### Import Errors
