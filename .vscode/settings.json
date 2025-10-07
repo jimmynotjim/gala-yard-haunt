@@ -9,7 +9,8 @@
     },
     "python.analysis.diagnosticMode": "workspace",
     "python.analysis.extraPaths": [
-      "typings"
+        "typings",
+        "./src/cannon"
     ],
     "python.analysis.stubPath": "typings",
     "python.analysis.typeCheckingMode": "strict",
