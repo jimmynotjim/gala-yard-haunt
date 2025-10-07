@@ -7,6 +7,59 @@ on systems without the actual gpiozero library installed.
 
 from collections.abc import Callable
 
+class OutputDevice:
+    """Represents a generic GPIO output device."""
+
+    def __init__(
+        self,
+        pin: int,
+        active_high: bool = True,
+        initial_value: bool = False,
+        pin_factory: object | None = None,
+    ) -> None: ...
+    def on(self) -> None:
+        """Turn the device on."""
+        ...
+
+    def off(self) -> None:
+        """Turn the device off."""
+        ...
+
+    def toggle(self) -> None:
+        """Toggle the device state."""
+        ...
+
+    def blink(
+        self,
+        on_time: float = 1,
+        off_time: float = 1,
+        n: int | None = None,
+        background: bool = True,
+    ) -> None:
+        """Make the device turn on and off repeatedly."""
+        ...
+
+    def close(self) -> None:
+        """Shut down the device and release all associated resources."""
+        ...
+
+    @property
+    def is_active(self) -> bool:
+        """Returns True if the device is currently active."""
+        ...
+
+    @property
+    def value(self) -> float:
+        """The duty cycle of the device. 0.0 is off, 1.0 is fully on."""
+        ...
+
+    @value.setter
+    def value(self, value: float) -> None: ...
+    @property
+    def pin(self) -> object:
+        """The Pin that the device is connected to."""
+        ...
+
 class LED:
     """Represents a light emitting diode (LED)."""
 
